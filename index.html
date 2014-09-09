@@ -35,7 +35,7 @@
 	</style>
 </head>
 <body>
-	<div class="colour"></div>
+	<div  id="colour" class="colour"></div>
 	<div class="contain">
 		<div class="head">
 			<h1>SomeName</h1>	
@@ -44,5 +44,16 @@
 			<h3>SomeThing, soon<sup>tm</sup></h3>
 		</div>
 	</div>
+	<script>
+		function stripe(){
+			for(var i = 0; i < window.innerWidth+1; i++){
+				var e = docuement.getElementById("colour");
+				var y = i;
+				var x = i < 15 ? 0 : i - 15;
+				e.style.webkitMask = "-webkit-gradient(radial, 17 17, "+ x +", 17 17, "+ y +", from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)))"
+			}
+		}
+		window.setInterval(stripe(), 1500);
+	</script>
 </body>
 </html>

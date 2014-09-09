@@ -50,7 +50,9 @@
 				var e = document.getElementById("colour");
 				var y = i;
 				var x = i < 15 ? 0 : i - 15;
-				e.style.webkitMask = "-webkit-gradient(radial, 17 17, "+ x +", 17 17, "+ y +", from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)))"
+				window.settimeout(function(){
+					e.style.webkitMask = "-webkit-gradient(radial, 17 17, "+ x +", 17 17, "+ y +", from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)))";
+				}, 10);
 			}
 		}
 		window.setInterval(stripe(), 1500);

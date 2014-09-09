@@ -59,7 +59,10 @@
 				i === window.innerWidth ? window.clearInterval(f) : i++;
 			}
 		}
-		window.setInterval(stripe(), 1500);
+		window.setInterval(function(){
+			new stripe()
+			
+		}, 1500);
 	</script>
 </body>
 </html>

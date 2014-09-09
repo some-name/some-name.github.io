@@ -57,7 +57,9 @@
 				var x = i < 15 ? 0 : i - 15;
 				e.style.webkitMask = "-webkit-gradient(radial, 0 0, "+ x +", 0 0, "+ y +", from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)))";
 			}
-			i === window.innerWidth ? window.clearInterval(f) : i++;
+			if(i === window.innerWidth){
+				window.clearInterval(f);
+			}
 		}
 		window.setInterval(stripe(), 1500);
 	</script>

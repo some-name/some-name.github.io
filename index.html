@@ -47,7 +47,7 @@
 	<script>
 		function stripe(){
 			var i = 0;
-			window.setInterval(function(){
+			var f = window.setInterval(function(){
 				beam();
 			}, 1000/250);
 			
@@ -56,8 +56,8 @@
 				var y = i;
 				var x = i < 15 ? 0 : i - 15;
 				e.style.webkitMask = "-webkit-gradient(radial, 0 0, "+ x +", 0 0, "+ y +", from(rgb(0, 0, 0)), color-stop(0.5, rgba(0, 0, 0, 0.2)), to(rgb(0, 0, 0)))";
-				i++;
 			}
+			i >= window.innerWidth ? window.clearInterval(f) : i++;
 		}
 		window.setInterval(stripe(), 1500);
 	</script>
